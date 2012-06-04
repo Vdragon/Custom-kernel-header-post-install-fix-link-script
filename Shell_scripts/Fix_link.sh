@@ -10,8 +10,11 @@ HEADERDIR=/usr/src/linux-headers-`uname -r`
 test -d $MODULEDIR || exit 1
 test -d $HEADERDIR || exit 2
 
-# update build link -- by first deleting whatever is there
+# update links -- by first deleting whatever is there
 test ! -e $MODULEDIR/build || rm --force $MODULEDIR/build
+test ! -e $MODULEDIR/source || rm --force $MODULEDIR/source
 
 # and then creating a new one
+# (in my test build and source should links to the same header folders
 ln --symbolic --force $HEADERDIR $MODULEDIR/build
+ln --symbolic --force $HEADERDIR $MODULEDIR/source
