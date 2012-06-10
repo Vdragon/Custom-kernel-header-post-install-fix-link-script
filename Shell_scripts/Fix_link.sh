@@ -16,5 +16,5 @@ test ! -e $MODULEDIR/source || rm --force $MODULEDIR/source
 
 # and then creating a new one
 # (in my test build and source should links to the same header folders
-ln --symbolic --force $HEADERDIR $MODULEDIR/build
-ln --symbolic --force $HEADERDIR $MODULEDIR/source
+ln --verbose --symbolic --force $HEADERDIR $MODULEDIR/build
+ln --verbose --symbolic --force $HEADERDIR $MODULEDIR/source
