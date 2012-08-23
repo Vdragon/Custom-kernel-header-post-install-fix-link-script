@@ -1,6 +1,5 @@
 #!/bin/bash
 #Script名稱：自訂kernel header安裝後修復symbolic link用script
-#Script作者：林博仁
 #智慧財產授權條款：GPLv3 or later
 
 MODULEDIR=/lib/modules/`uname -r`
